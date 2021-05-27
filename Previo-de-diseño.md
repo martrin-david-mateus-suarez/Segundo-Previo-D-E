@@ -3,9 +3,10 @@ SEGUNDO PREVIO
 
 ## Experimento de la Farmacocinetica
 
-This is an R Markdown format used for publishing markdown documents to
-GitHub. When you click the **Knit** button all R code chunks are run and
-a markdown file (.md) suitable for publishing to GitHub is generated.
+La base de datos Theoph, tiene 132 filas y 5 columnas de datos de un
+experimento sobre la farmacocinética de la teofilina. Boeckmann, Sheiner
+y Beal (1994) informan datos de un estudio del Dr. Robert Upton sobre la
+cinética del fármaco antiasmático teofilina.
 
 ``` r
 subj1 <- ifelse(Theoph$Subject == 1, TRUE, FALSE)
@@ -26,25 +27,15 @@ Theoph[subj1,]
     ## 10       1 79.6 4.02 12.12  5.94
     ## 11       1 79.6 4.02 24.37  3.28
 
+``` r
+mean(subj1, na.rm = TRUE)
+```
+
+    ## [1] 0.08333333
+
 ## Including Code
 
 You can include R code in the document as follows:
-
-``` r
-summary(cars)
-```
-
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
-
-## Including Plots
-
-You can also embed plots, for example:
 
 ![](Previo-de-diseño_files/figure-gfm/pressure-1.png)<!-- -->
 

@@ -9,9 +9,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Experimento de la Farmacocinetica 
 
+La base de datos Theoph, tiene 132 filas y 5 columnas de datos de un experimento sobre la farmacocinética de la teofilina. Boeckmann, Sheiner y Beal (1994) informan datos de un estudio del Dr. Robert Upton sobre la cinética del fármaco antiasmático teofilina.
 
-
-This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
 
 ```{r}
 subj1 <- ifelse(Theoph$Subject == 1, TRUE, FALSE)
@@ -20,6 +19,9 @@ Theoph[subj1,]
 
 ```
 ```{r}
+mean(subj1, na.rm = TRUE)
+
+
 
 ```
 
@@ -29,12 +31,10 @@ Theoph[subj1,]
 You can include R code in the document as follows:
 
 ```{r cars}
-summary(cars)
+
+                                          
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE}
 plot(pressure)
